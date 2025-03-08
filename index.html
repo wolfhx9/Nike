@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Nike Web Site With Tailwind CSS">
+    <meta name="keywords" content="Nike, shoes, sportswear, athletic, Tailwind CSS">
+
+    <!-- Links -->
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="assets/FontAwesome/all.min.css">
+
+    <!-- AOS Link -->
+    <link rel="stylesheet" href="assets/aos/aos.css">
+
+    <!-- Main Css -->
+    <link rel="stylesheet" href="style/main.min.css">
+    
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/image/favicon.jpg" sizes="128x128" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/image/favicon.jpg" sizes="128x128">
+    <title>Nike - Tailwind CSS</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white fixed left-0 top-0 z-50 right-0 shadow-xl">
+        <!-- Navbar -->
+        <nav class="container flex items-center justify-between px-8 lg:px-0">
+            <!-- Left Items (Logo) -->
+            <div>
+                <a href="#">
+                    <h1 class="capitalize text-3xl font-bold font-mono text-secondary lg:text-5xl">
+                        Shoe<span class="text-primary underline decoration-4">s</span> 
+                    </h1>
+                </a>
+            </div>
+
+            <!-- Center Items -->
+            <div class="hidden capitalize font-mono text-xl lg:block">
+                <ul class="flex space-x-10">
+                    <li class="duration-300 hover:text-secondary"><a href="#Hero">home</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#Products">products</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#About">about us</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#Review">review</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#Services">Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Items -->
+            <div class="hidden text-2xl space-x-2 cursor-pointer lg:block">
+                <i class="duration-300 hover:text-secondary fa-solid fa-heart"></i>
+                <i class="duration-300 hover:text-secondary fa-solid fa-basket-shopping"></i>
+                <i class="duration-300 hover:text-secondary fa-solid fa-user"></i>
+            </div>
+
+            <!-- mobile Menu -->
+            <button id="menu-btn" class="lg:hidden" aria-label="Toggle mobile menu">
+                <span class="mobile-menu-top"></span>
+                <span class="mobile-menu-middle"></span>
+                <span class="mobile-menu-bottom"></span>
+            </button>
+        </nav>
+            <!-- mobile menu -->
+            <div id="menu" class="hidden bg-gray-100 items-center justify-center capitalize font-mono z-50">
+                <ul class="flex flex-col items-center justify-center space-y-4 py-6">
+                    <li class="duration-300 py-2 px-10 rounded-2xl hover:text-secondary hover:bg-gray-500"><a href="#Hero">home</a></li>
+                    <li class="duration-300 py-2 px-10 rounded-2xl hover:text-secondary hover:bg-gray-500"><a href="#Products">products</a></li>
+                    <li class="duration-300 py-2 px-10 rounded-2xl hover:text-secondary hover:bg-gray-500"><a href="#About">about us</a></li>
+                    <li class="duration-300 py-2 px-10 rounded-2xl hover:text-secondary hover:bg-gray-500"><a href="#Review">review</a></li>
+                    <li class="duration-300 py-2 px-10 rounded-2xl hover:text-secondary hover:bg-gray-500"><a href="#Services">Services</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Hero Section -->
+        <section id="Hero" class="bg-[url(/assets/image/background.webp)] bg-right bg-cover lg:bg-center">
+            <!-- container -->
+            <div class="container h-screen flex flex-col-reverse lg:flex-row items-center justify-between pt-40 md:pt-20">
+                <!-- text -->
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold pb-8 pt-4 bg-gradient-to-r from-secondary to-black bg-clip-text text-transparent lg:pt-0 lg:pb-20 lg:text-5xl">
+                        Nike collection
+                    </h2>
+                    <p class="w-full text-lg pb-8 lg:w-2/3 lg:text-2xl">
+                        Nike inspires athletes around the world with innovative products, experiences and services.
+                    </p>
+                    <button class="main-btn" aria-label="Shop Now">
+                        <a href="https://www.nike.com/" target="_blank" rel="noopener noreferrer">Shop Now</a>
+                        <i class="pl-4 fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <img src="assets/image/shoes.webp" loading="eager" alt="shoes" class="w-9/12 ml-36">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="Products" class="mt-36 lg:mt-0">
+            <h2 class="title">
+                Products
+            </h2>
+            <!-- Cards -->
+            <div data-aos="fade-up" data-aos-offset="500" class="text-center grid grid-cols-1 gap-8 px-8 py-20 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+                <!-- card 1 -->
+                <div class="card">
+                    <img src="assets/image/shoes1.webp" alt="Nike Kobe 9 EM" loading="lazy">
+                    <h3>Nike Kobe 9 EM</h3>
+                    <p>$449</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 2 -->
+                <div class="card">
+                    <img src="assets/image/shoes2.webp" alt="Nike Zoom KD 9" loading="lazy">
+                    <h3>Nike Zoom KD 9</h3>
+                    <p>$149</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 3 -->
+                <div class="card">
+                    <img src="assets/image/shoes3.webp" alt="Nike Zoom Structure 20" loading="lazy">
+                    <h3>Nike Zoom Structure 20</h3>
+                    <p>$349</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 4 -->
+                <div class="card">
+                    <img src="assets/image/shoes4.webp" alt="Nike Air Max 2015" loading="lazy">
+                    <h3>Nike Air Max 2015</h3>
+                    <p>$109</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 5 -->
+                <div class="card">
+                    <img src="assets/image/shoes5.webp" alt="Nike Air Huarache Run Ultra 8" loading="lazy">
+                    <h3>Nike Air Huarache Run Ultra 8</h3>
+                    <p>$549</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 6 -->
+                <div class="card">
+                    <img src="assets/image/shoes6.webp" alt="NIKE Womens Running Crimson" loading="lazy">
+                    <h3>NIKE Womens Running Crimson</h3>
+                    <p>$100</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 7 -->
+                <div class="card">
+                    <img src="assets/image/shoes7.webp" alt="Nike air max 90 infrared black" loading="lazy">
+                    <h3>Nike air max 90 infrared black</h3>
+                    <p>$149</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+                <!-- card 8 -->
+                <div class="card">
+                    <img src="assets/image/shoes8.webp" alt="Nike Dual Fusion Running" loading="lazy">
+                    <h3>Nike Dual Fusion Running</h3>
+                    <p>$169</p>
+                    <!-- stars -->
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <button class="main-btn-small" aria-label="Add To Cart">
+                        Add To Cart
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="About">
+            <h2 class="title">
+                About Us
+            </h2>
+            <div class="flex flex-col justify-between px-8 py-20 space-y-10 xl:flex-row xl:px-20">
+                <div class="w-full flex space-x-10 xl:w-1/2" data-aos="fade-right" data-aos-offset="500">
+                    <!-- image box -->
+                    <div class="image-box flex flex-col space-y-4 pt-8 ">
+                        <img src="assets/image/red_shoes1.webp" alt="about image 1" loading="lazy" onclick="ChangeImage(this)">
+                        <img src="assets/image/red_shoes2.webp" alt="about image 2" loading="lazy" onclick="ChangeImage(this)">
+                        <img src="assets/image/red_shoes3.webp" alt="about image 3" loading="lazy" onclick="ChangeImage(this)">
+                        <img src="assets/image/red_shoes4.webp" alt="about image 4" loading="lazy" onclick="ChangeImage(this)">
+                    </div>
+                    <!-- main image -->
+                    <div class="rounded-2xl border-3 border-primary shadow-[0_0px_8px] shadow-primary">
+                        <img id="main-image" src="assets/image/red_shoes1.webp" alt="about us" class="w-full p-14 object-cover bg-white rounded-xl">
+                    </div>
+                </div>
+                <div class="w-4/5 ml-28 py-14 flex items-center justify-center px-10 rounded-2xl border-3 border-secondary shadow-[0_0px_8px] shadow-secondary lg:ml-40 lg:py-10 xl:w-1/2 xl:ml-10 xl:py-0">
+                    <p class="text-md md:text-xl font-semibold">
+                        When the road beckons, answer the call in a lightweight pair that'll 
+                        keep you moving mile after mile. Soft foam cushions
+                        your stride and a reinforced heel delivers a smooth, 
+                        stable ride. Crafted from knit material for breathable support,
+                        while a minimalist design fits in just about anywhere your day 
+                        takes you.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Customer's Review Section -->
+        <section id="Review">
+            <div class="container">
+                <h2 class="title">
+                    Customer's Review
+                </h2>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 gap-8 px-8 py-20 md:grid-cols-2 xl:grid-cols-3" data-aos="fade-up" data-aos-offset="500">
+                    <!-- card 1 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/man_1.webp" alt="review 1" loading="lazy">
+                            <div class="pl-6">
+                                <h3>Gary</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "Amazing Width. So happy Nike are providing extra wide in some models. Hoping for some more exciting colours soon."
+                        </p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/man_2.webp" alt="review 2" loading="lazy">
+                            <div class="pl-6">
+                                <h3>Bharat</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "good support and cushion for daily uphill walk on treadmill."
+                        </p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/man_3.webp" alt="review 3" loading="lazy">
+                            <div class="pl-6">
+                                <h3>Patrick</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "Finally they brought the comfort of the Air Max bubble to your entire foot! These stylish sneakers are ready to wear all
+                            day, rain or shine, with the slick mesh outer material and springy soles."
+                        </p>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/girl_1.webp" alt="review 4" loading="lazy">
+                            <div class="pl-6">
+                                <h3>Clifford</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "My first pair of Nike extra width shoes. They fit well and my arthritic toes have space, so less pain. I reccomend these
+                            shoes they feel good on my feet!"
+                        </p>
+                    </div>
+
+                    <!-- card 5 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/girl_2.webp" alt="review 5" loading="lazy">
+                            <div class="pl-6">
+                                <h3>Englsih</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "Super comfy!! Walk all day in my warehouse job and my feet and knees do not ache! Great investment."
+                        </p>
+                    </div>
+
+                    <!-- card 6 -->
+                    <div class="card">
+                        <!-- Card Top -->
+                        <div class="flex items-center">
+                            <img src="assets/image/girl_3.webp" alt="review 6" loading="lazy">
+                            <div class="pl-6">
+                                <h3>SuwalG</h3>
+                                <!-- stars -->
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            "This is worst shoe so far i bought for my son. The side heel worn out within two week of use . Don't buy this shoe . No
+                            Star but one star just to post this comments ."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="Services">
+            <h2 class="title">
+                Our Services
+            </h2>
+
+            <div class="container grid grid-cols-1 px-8 py-10 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+                <!-- card 1 -->
+                <div class="text-center flex flex-col items-center p-8 rounded-2xl" data-aos="fade-right" data-aos-offset="500">
+                    <i class="text-7xl pb-2 text-yellow-500 fa-solid fa-truck-fast"></i>
+                    <h4 class="text-2xl font-bold pt-4">Fast Delivery</h4>
+                    <p class="text-sm py-2 text-gray-500">
+                        Get your orders delivered fast and hassle-free with our express shipping service! Enjoy speed, reliability, and
+                        convenience at your fingertips.
+                    </p>
+                </div>
+
+                <!-- card 2 -->
+                <div class="text-center flex flex-col items-center p-8 rounded-2xl" data-aos="fade-down" data-aos-offset="500">
+                    <i class="text-7xl pb-2 text-yellow-500 fa-solid fa-truck-fast"></i>
+                    <h4 class="text-2xl font-bold pt-4">10 Days Replacement</h4>
+                    <p class="text-sm py-2 text-gray-500">
+                        Enjoy a 10-day replacement guarantee for a worry-free shopping experience! If something's not right, we've got you
+                        covered.
+                    </p>
+                </div>
+
+                <!-- card 3 -->
+                <div class="text-center flex flex-col items-center p-8 rounded-2xl" data-aos="fade-left" data-aos-offset="500">
+                    <i class="text-7xl pb-2 text-yellow-500 fa-solid fa-headset"></i>
+                    <h4 class="text-2xl font-bold pt-4">24 x 7 Support</h4>
+                    <p class="text-sm py-2 text-gray-500">
+                        Get 24/7 Support whenever you need help! Our team is always available to assist you.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Scroll Back To Top Button -->
+        <button id="STB" title="Go to top" data-aos="fade-up" data-aos-offset="500">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100">
+        <div class="container grid grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-4" data-aos="fade-down" data-aos-offset="100">
+            <!-- col 1 -->
+            <div class="p-8">
+                <h3 class="text-2xl text-blue-950 font-bold pb-4">Contact</h3>
+                <div class="flex space-x-4 space-y-4 items-start">
+                    <i class="text-xl duration-300 hover:text-secondary fa-solid fa-house"></i>
+                    <p>123/colombo lanka</p>
+                </div>
+                <div class="flex space-x-4 space-y-4 items-start">
+                    <i class="text-xl duration-300 hover:text-secondary fa-solid fa-phone"></i>
+                    <p>+94 123 456 789</p>
+                </div>
+                <div class="flex space-x-4 space-y-4 items-start">
+                    <i class="text-xl duration-300 hover:text-secondary fa-solid fa-envelope"></i>
+                    <p>Contact@email.com</p>
+                </div>
+            </div>
+            <!-- col 2 -->
+            <div class="p-8">
+                <h3 class="text-2xl text-blue-950 font-bold pb-4">Get Help</h3>
+                <ul class="space-y-4">
+                    <li class="duration-300 hover:text-secondary"><a href="#">FAQ</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">Shipping</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">Returns</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">Payment Options</a></li>
+                </ul>
+            </div>
+            <!-- col 3 -->
+            <div class="p-8">
+                <h3 class="text-2xl text-blue-950 font-bold pb-4">Our Stores</h3>
+                <ul class="space-y-4">
+                    <li class="duration-300 hover:text-secondary"><a href="#">Sri Lanka</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">USA</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">India</a></li>
+                    <li class="duration-300 hover:text-secondary"><a href="#">Japan</a></li>
+                </ul>
+            </div>
+            <!-- col 4 -->
+            <div class="p-8">
+                <h3 class="text-2xl text-blue-950 font-bold pb-4">Follw Us</h3>
+                <div class="flex text-2xl space-x-6">
+                    <i class="bg-white p-2 rounded-full duration-300 hover:text-white hover:bg-secondary fa-brands fa-facebook"></i>
+                    <i class="bg-white p-2 rounded-full duration-300 hover:text-white hover:bg-secondary fa-brands fa-instagram"></i>
+                    <i class="bg-white p-2 rounded-full duration-300 hover:text-white hover:bg-secondary fa-brands fa-twitter"></i>
+                    <i class="bg-white p-2 rounded-full duration-300 hover:text-white hover:bg-secondary fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/FontAwesome/all.min.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/aos/aos.js"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
