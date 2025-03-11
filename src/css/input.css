@@ -74,6 +74,11 @@ html {
 .title {
     @apply text-4xl font-bold capitalize text-center bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent lg:text-5xl
 }
+
+/* Hero */
+#Hero {
+    background-image: url(/assets/image/background.webp);
+}
 #Hero img {
     animation: pop 2s ease-in-out infinite;
 }
